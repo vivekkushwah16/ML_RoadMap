@@ -1,0 +1,117 @@
+#deployment{
+  background: #000000;
+}
+
+
+#cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 2rem;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.card_dep { 
+  background-color: #ffff!important;
+  font-family: 'Heebo';
+  --bg-filter-opacity: 0.5;
+  height: 17em;
+  width: 302px !important;
+  font-size: 1.5em;
+  color: #000;
+  padding: .5em;
+  display: flex;
+  align-items:center!important;
+  justify-content: center!important;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 2em -1em black;
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+ 
+  text-decoration: none;
+}
+
+.card_dep:hover {
+  transform: rotate(0);
+}
+.card_dep h1 {
+  margin: 0;
+  font-size: 1.3em;
+}
+.card_dep p {
+  font-size: 0.7em;
+  word-spacing:0;
+  font-family: 'Open Sans';
+  margin-top: 0.5em;
+  text-align: justify;
+}
+.card_dep:before, .card_dep:after {
+  content: '';
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+.card_dep:before {
+  background: #ddd;
+ 
+  width: 250%;
+  height: 250%;
+}
+.card_dep:after {
+  background:#ffff;
+ 
+
+  width: 200%;
+  height: 200%;
+}
+.card_dep:hover {
+  color: var(--color);
+}
+.card_dep:hover:before, .card_dep:hover:after {
+  transform: scale(1);
+}
+.card_dep-grid-space .num {
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+}
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .card_dep-grid-space .num {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards-wrapper {
+    padding: 4rem 2rem;
+  }
+  .card_dep {
+    max-width: calc(100vw - 4rem);
+  }
+}
+

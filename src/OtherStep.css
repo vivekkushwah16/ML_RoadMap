@@ -1,0 +1,99 @@
+#others{
+   
+    margin: 40px
+   
+}
+.card_content{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.maincontainer
+{   margin: auto;
+    width: 302px;
+    height: 299px;
+    margin:20px 12px;
+    float: left; /* stack each div horizontally */
+    border-width:5px;
+    border-color: black;
+   
+}
+
+
+
+.back h2
+{    
+    position: absolute;
+}
+
+.back p
+{
+    position: absolute;
+    top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  
+}
+
+.front h2
+{
+    position: absolute;
+    padding: 10px;
+    top: 25%;
+    left: 10%;
+    color: #000;
+    
+}
+
+/* style the maincontainer class with all child div's of class .front */
+ .front
+{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 3em -1em black;
+    border-width: 10px;
+    color: #fff;
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    width: 302px;
+    height: 310px;
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+/* style the maincontainer class with all child div's of class .back */
+.maincontainer > .back
+{
+    position: absolute;
+    box-shadow: 0 0 2em -1em black;
+    transform: perspective(600px) rotateY(180deg);
+    background: #000000;
+    color: #fff;
+    width: 302px;
+    height: 310px;
+    border-radius: 10px;
+    padding: 12px;
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+.maincontainer:hover > .front
+{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.maincontainer:hover > .back
+{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+@media screen and ( max-width:980px){
+    .card_content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}

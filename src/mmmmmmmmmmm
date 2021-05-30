@@ -1,0 +1,164 @@
+ <div className="container-fluid col-9 mx-auto">
+        <section id="statistics">
+        <div className="maincontainer">
+            <div className="back bg-light">
+                <p className="text-dark">Having a basic understanding of probability and statistics is important when it comes to
+                mastering Machine Learning.
+                Here is one of the best resources for that: Statistics Revision Notes by MathBox</p>
+            </div>
+            <div className="front border border-darken-1 bg-dark">
+               
+                
+                <h2><strong className="text-light ">Step 4: : Learn Statistics</strong></h2>
+                </div>
+            </div>
+        
+        </section>
+        <section id="algebra">
+            <div className="maincontainer">
+                <div className="back">
+                
+                    <p>You should learn Linear Algebra if you wish to master Machine Learning and become a pro!
+                        This is essential because if you want to tune your models with maximum flexibility, you need to
+                        know how they work, and knowing linear algebra is a must for that!
+                        When you start, you should focus on Step 1, and while you are following step 1, you can begin
+                        learning Linear Algebra parallelly. This is what I call the parallel conquering technique.</p>
+                </div>
+                <div className="front ">
+                    <h2><strong>Step 5: : Learn  Linear Algebra
+                    </strong></h2>
+                    </div>
+                </div>
+        </section>    
+        <section id="libraries">
+            <div className="maincontainer ">
+                <div className="back bg-light">
+                    <p className="text-dark"><ul>
+                        <li>
+                        Learn Numpy
+                        </li>
+                        <li>
+                        Learn Pandas
+                        </li>
+                        <li>
+                        All this will be helpful to debug the python/sklearn code
+                        </li>
+                    </ul>.</p>
+                </div>
+                <div className="front border border-darken-1 bg-dark">
+                    <h2><strong className="text-light ">Step 6: : Learn Python Libraries</strong></h2>
+                    </div>
+                </div>
+         
+            </section>     
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          #others{
+   
+    margin-top: 40px;
+    
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+   
+}
+.maincontainer
+{   margin: auto;
+    width: 302px;
+    height: 299px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    /* float: left; stack each div horizontally */
+    border-width:5px;
+    border-color: black;
+    
+   
+}
+
+
+
+.back h2
+{    
+    position: absolute;
+}
+
+.back p
+{
+    position: absolute;
+    top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  
+}
+
+.front h2
+{
+    position: absolute;
+    padding: 10px;
+    top: 25%;
+    left: 10%;
+    color: #000;
+    
+}
+
+/* style the maincontainer class with all child div's of class .front */
+ .front
+{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 3em -1em black;
+    border-width: 10px;
+    color: #fff;
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    
+    width: 302px;
+    height: 290px;
+    
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+/* style the maincontainer class with all child div's of class .back */
+.maincontainer > .back
+{
+    position: absolute;
+    box-shadow: 0 0 2em -1em black;
+    transform: perspective(600px) rotateY(180deg);
+    background: #262626;
+    color: #fff;
+    width: 302px;
+    height: 290px;
+    border-radius: 10px;
+    padding: 5px;
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+.maincontainer:hover > .front
+{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.maincontainer:hover > .back
+{
+    transform: perspective(600px) rotateY(0deg);
+}
+
